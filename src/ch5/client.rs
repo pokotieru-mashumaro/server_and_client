@@ -1,4 +1,4 @@
-use std::{io::{stdin, BufRead, BufReader, Write}, net::TcpStream, sync::mpsc, thread, time::Duration};
+use std::{io::{stdin, BufRead, BufReader, Write}, net::TcpStream, thread, time::Duration};
 
 fn main() {
     let serv_addr = "127.0.0.1:8888";
