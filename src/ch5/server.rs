@@ -40,10 +40,10 @@ fn start_thread(client: TcpStream, tx: mpsc::Sender<String>) {
     });
 }
 
-fn send_all(client: Vec<TcpStream>, s: &str) -> Vec<TcpStream> {
+fn send_all(clients: Vec<TcpStream>, s: &str) -> Vec<TcpStream> {
     let mut collector = vec![];
 
-    for mut socket in client.into_iter() {
+    for mut socket in clients.into_iter() {
         let bytes = String::from(s).into_bytes();
 
         if let Err(e) = socket.write_all(&bytes) {
