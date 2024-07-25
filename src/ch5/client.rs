@@ -1,7 +1,7 @@
 use std::{io::{stdin, BufRead, BufReader, Write}, net::TcpStream, thread, time::Duration};
 
 pub fn client_main() {
-    let serv_addr = "127.0.0.1:8888";
+    let serv_addr = "127.0.0.1:7878";
     let mut socket = TcpStream::connect(serv_addr).expect("サーバーと接続できません");
     socket.set_nonblocking(true).expect("利用不可");
     println!("{}と接続しました", serv_addr);

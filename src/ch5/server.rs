@@ -5,7 +5,7 @@ use std::thread;
 use std::time::Duration;
 
 pub fn server_main() {
-    let serv_addr = "127.0.0.1:8888";
+    let serv_addr = "127.0.0.1:7878";
     let (tx, rx) = mpsc::channel::<String>();
     let mut clients: Vec<TcpStream> = Vec::new();
 
